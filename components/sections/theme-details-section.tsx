@@ -39,7 +39,7 @@ export default function ThemeDetailsSection() {
             </p>
           </div>
           <div className="flex flex-col items-center text-center p-4">
-            <Globe className="h-10 w-10 mb-2 text-primary-magenta dark:text-pink-400" />
+            <Globe className="h-10 w-10 mb-2 text-primary-magenta dark:text-pink-900" />
             <h3 className="font-semibold text-lg text-primary-magenta dark:text-white">Impacto Global</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs">
               Soluciones a desafíos como cambio climático y salud pública.

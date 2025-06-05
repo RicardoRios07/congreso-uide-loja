@@ -6,8 +6,6 @@ export default function LocationContactSection() {
   const uideLojaAddress =
     "Parroquia El Valle, sector Jipiro, Calle Agustín Carrión y Av. Salvador Bustamante Celi, detrás de Solca."
   const contactEmail = "anordonezle@uide.edu.ec"
-  // Placeholder para un número de teléfono, puedes añadirlo si es necesario
-  // const contactPhone = "+593 X XXX XXXX"
   const googleMapsLink = `https://maps.app.goo.gl/LhyLYQjKD9TVUF1X8`
 
   return (
@@ -53,7 +51,7 @@ export default function LocationContactSection() {
               </div>
             </CardContent>
             <div className="p-6 pt-0">
-              <Button asChild className="w-full bg-primary-blue hover:bg-primary-blue/90 text-white">
+              <Button asChild className="w-full bg-primary-blue hover:bg-primary-blue/90 text-white transform transition-transform duration-300 hover:scale-105">
                 <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" /> Ver en Google Maps
                 </a>
@@ -66,9 +64,9 @@ export default function LocationContactSection() {
             <CardHeader className="pb-4">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-3 rounded-full bg-primary-magenta/10 dark:bg-primary-magenta/20">
-                  <Mail className="h-6 w-6 text-primary-magenta dark:text-pink-400" />
+                  <Mail className="h-6 w-6 text-primary-magenta dark:text-pink-900" />
                 </div>
-                <CardTitle className="text-2xl text-primary-magenta dark:text-pink-300">
+                <CardTitle className="text-2xl text-primary-magenta dark:text-pink-900">
                   Información de Contacto
                 </CardTitle>
               </div>
@@ -83,6 +81,7 @@ export default function LocationContactSection() {
                   <p className="font-semibold text-slate-800 dark:text-slate-200">Correo Electrónico:</p>
                   <a
                     href={`mailto:${contactEmail}`}
+                    target="_blank"
                     className="text-sm text-primary-blue hover:underline dark:text-sky-400"
                   >
                     {contactEmail}
@@ -114,8 +113,8 @@ export default function LocationContactSection() {
               </p>
             </CardContent>
             <div className="p-6 pt-0">
-              <Button asChild className="w-full bg-primary-magenta hover:bg-primary-magenta/90 text-white">
-                <a href={`mailto:${contactEmail}`}>
+              <Button asChild className="w-full bg-primary-magenta hover:bg-primary-magenta/90 text-white transform transition-transform duration-300 hover:scale-105">
+                <a href={`mailto:${contactEmail}`} target="_blank">
                   <Mail className="mr-2 h-4 w-4" /> Enviar un Correo
                 </a>
               </Button>

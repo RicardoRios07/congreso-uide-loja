@@ -9,9 +9,9 @@ export default function AboutSection() {
           Sobre el Congreso
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-start">
-          <Card className="shadow-lg dark:bg-slate-850">
+          <Card className="shadow-lg dark:bg-slate-850 transform transition-transform duration-300 hover:scale-105">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-primary-magenta dark:text-pink-400">
+              <CardTitle className="flex items-center gap-2 text-primary-magenta dark:text-pink-900">
                 <Target className="h-6 w-6" />
                 Objetivos del Congreso
               </CardTitle>
@@ -30,7 +30,7 @@ export default function AboutSection() {
           </Card>
 
           <div className="space-y-8">
-            <Card className="shadow-lg dark:bg-slate-850">
+            <Card className="shadow-lg dark:bg-slate-850 transform transition-transform duration-300 hover:scale-105">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-primary-blue dark:text-sky-400">
                   <Users className="h-6 w-6" />
@@ -45,9 +45,9 @@ export default function AboutSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg dark:bg-slate-850">
+            <Card className="shadow-lg dark:bg-slate-850 transform transition-transform duration-300 hover:scale-105">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-primary-blue dark:text-sky-400">
+                <CardTitle className="flex items-center gap-2 text-primary-yellow">
                   <Presentation className="h-6 w-6" />
                   Modalidad
                 </CardTitle>

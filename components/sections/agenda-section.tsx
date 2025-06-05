@@ -7,55 +7,55 @@ const agendaData = {
       hora: "09H00",
       actividad: "Registro de participantes",
       participan: "",
-      icon: <UserCheck className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <UserCheck className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "09H30",
       actividad: "Acto de apertura",
       participan: "",
-      icon: <Handshake className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Handshake className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "MESA 1:",
       actividad: "Ciencia, Sociedad y Comportamiento",
       isHeader: true,
-      icon: <Users className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Users className="h-5 w-5 text-white inline-block mr-2" />,
     },
     {
       hora: "10h00",
       actividad: "Conferencia Magistral",
       participan: "",
-      icon: <Presentation className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Presentation className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "11h00-12h30",
       actividad: "Ponencias mesa 1",
       participan: "",
-      icon: <Mic className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Mic className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "MESA 2:",
       actividad: "Sostenibilidad y Desarrollo",
       isHeader: true,
-      icon: <Users className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Users className="h-5 w-5 text-white inline-block mr-2" />,
     },
     {
       hora: "15h15",
       actividad: "Conferencia Magistral",
       participan: "",
-      icon: <Presentation className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Presentation className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "15h45-17h30",
       actividad: "Ponencias mesa 2",
       participan: "",
-      icon: <Mic className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Mic className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "17H30",
       actividad: "Coffee Break",
       participan: "",
-      icon: <Coffee className="h-5 w-5 text-primary-magenta inline-block mr-2" />,
+      icon: <Coffee className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
   ],
   viernes: [
@@ -63,25 +63,25 @@ const agendaData = {
       hora: "MESA 3:",
       actividad: "Ciencia, Economía y Emprendimiento",
       isHeader: true,
-      icon: <Users className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Users className="h-5 w-5 text-white inline-block mr-2" />,
     },
     {
       hora: "10h00",
       actividad: "Conferencia Magistral",
       participan: "",
-      icon: <Presentation className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Presentation className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "11h00-12h30",
       actividad: "Ponencias mesa 3",
       participan: "",
-      icon: <Mic className="h-5 w-5 text-primary-blue inline-block mr-2" />,
+      icon: <Mic className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
     {
       hora: "12H30",
       actividad: "Coffee Break",
       participan: "",
-      icon: <Coffee className="h-5 w-5 text-primary-magenta inline-block mr-2" />,
+      icon: <Coffee className="h-5 w-5 text-primary-yellow inline-block mr-2" />,
     },
   ],
 }
@@ -94,9 +94,9 @@ export default function AgendaSection() {
           Agenda del Congreso
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="shadow-lg dark:bg-slate-850">
+          <Card className="shadow-lg bg-primary-blue dark:dark:bg-blue-900 transform transition-transform duration-300 hover:scale-105">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-primary-magenta dark:text-pink-400">
+              <CardTitle className="text-xl font-semibold text-white">
                 Jueves, 6 de Noviembre
               </CardTitle>
             </CardHeader>
@@ -105,14 +105,14 @@ export default function AgendaSection() {
                 {agendaData.jueves.map((item, index) => (
                   <li
                     key={index}
-                    className={`flex items-center ${item.isHeader ? "pt-4 font-bold text-primary-blue dark:text-sky-300 text-lg" : "border-b border-slate-200 dark:border-slate-700 pb-2"}`}
+                    className={`flex items-center ${item.isHeader ? "pt-4 font-bold text-white  text-lg" : "border-b border-slate-200 dark:border-slate-700 pb-2"}`}
                   >
                     {!item.isHeader && (
-                      <span className="w-24 font-medium text-gray-700 dark:text-gray-300 flex-shrink-0">
+                      <span className="w-24 font-medium text-white  flex-shrink-0">
                         {item.hora}
                       </span>
                     )}
-                    <span className="flex-1 text-gray-600 dark:text-gray-400 flex items-center">
+                    <span className="flex-1 text-white flex items-center">
                       {item.icon}
                       {item.actividad}
                     </span>
@@ -121,9 +121,9 @@ export default function AgendaSection() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="shadow-lg dark:bg-slate-850">
+          <Card className="shadow-lg bg-primary-blue dark:bg-blue-900 transform transition-transform duration-300 hover:scale-105">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-primary-magenta dark:text-pink-400">
+              <CardTitle className="text-xl font-semibold text-white">
                 Viernes, 7 de Noviembre
               </CardTitle>
             </CardHeader>
@@ -132,14 +132,14 @@ export default function AgendaSection() {
                 {agendaData.viernes.map((item, index) => (
                   <li
                     key={index}
-                    className={`flex items-center ${item.isHeader ? "pt-4 font-bold text-primary-blue dark:text-sky-300 text-lg" : "border-b border-slate-200 dark:border-slate-700 pb-2"}`}
+                    className={`flex items-center ${item.isHeader ? "pt-4 font-bold text-white dark:text-sky-300 text-lg" : "border-b border-slate-200 dark:border-slate-700 pb-2"}`}
                   >
                     {!item.isHeader && (
-                      <span className="w-24 font-medium text-gray-700 dark:text-gray-300 flex-shrink-0">
+                      <span className="w-24 font-medium text-white dark:text-gray-300 flex-shrink-0">
                         {item.hora}
                       </span>
                     )}
-                    <span className="flex-1 text-gray-600 dark:text-gray-400 flex items-center">
+                    <span className="flex-1 text-white dark:text-gray-400 flex items-center">
                       {item.icon}
                       {item.actividad}
                     </span>

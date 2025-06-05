@@ -1,10 +1,27 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import type React from "react"
 import { Button } from "@/components/ui/button"
-// Los iconos CalendarDays, MapPin, Sparkles ya no son necesarios aquí
 
 export default function HeroSection() {
+  const [bgImage, setBgImage] = useState("/banner1.jpeg")
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setBgImage("/banner2.jpeg") 
+      } else {
+        setBgImage("/banner1.jpeg") 
+      }
+    }
+
+    handleResize() 
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
     const section = document.querySelector(href)
@@ -13,25 +30,22 @@ export default function HeroSection() {
     }
   }
 
-  const heroBackgroundImage = "/banner.jpeg" // Asegúrate que esta ruta sea correcta
-
   return (
     <section
       id="hero"
-      className="relative text-white py-28 md:py-80 min-h-screen flex items-center justify-center"
+      className="relative text-white pt-28 md:pt-36 flex items-end md:items-center justify-center"
       style={{
-        backgroundImage: `url(${heroBackgroundImage})`,
-        backgroundSize: "contain",
-        backgroundPosition: "center",
+        height: "90vh",
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
       }}
     >
+      <div className="absolute inset-0 bg-black/20" />
 
-      {/* Overlay para asegurar que la imagen no sea demasiado brillante si los botones no tienen fondo */}
-      <div className="absolute inset-0 bg-black/20"></div> {/* Overlay más sutil */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10 flex justify-end">
-        {/* Contenedor para los botones, alineado a la derecha */}
-        <div className="flex flex-col sm:flex-row gap-4">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 flex justify-center md:justify-end">
+        <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-0">
           <Button
             asChild
             size="lg"
@@ -45,7 +59,7 @@ export default function HeroSection() {
             asChild
             variant="outline"
             size="lg"
-            className="text-white border-white/80 hover:bg-primary-blue bg-black/30 backdrop-blur-sm font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            className="text-white border-white/80 hover:bg-primary-blue hover:text-white bg-black/30 backdrop-blur-sm font-medium text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           >
             <a href="#agenda" onClick={(e) => scrollToSection(e, "#agenda")}>
               Ver Agenda del Congreso

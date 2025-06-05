@@ -63,9 +63,9 @@ export default function ThematicTablesSection() {
                 </div>
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-4 px-2 text-gray-700 dark:text-gray-300">
-                <p className="font-medium mb-3 text-primary-magenta dark:text-pink-300">Objetivo:</p>
+                <p className="font-medium mb-3 text-primary-magenta dark:text-pink-900">Objetivo:</p>
                 <p className="mb-4">{table.objective}</p>
-                <p className="font-medium mb-2 text-primary-magenta dark:text-pink-300">Temáticas:</p>
+                <p className="font-medium mb-2 text-primary-magenta dark:text-pink-900">Temáticas:</p>
                 <ul className="list-disc list-inside space-y-1 pl-2">
                   {table.topics.map((topic, i) => (
                     <li key={i}>{topic}</li>

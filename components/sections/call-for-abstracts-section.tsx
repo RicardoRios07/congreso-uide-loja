@@ -26,7 +26,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleContinueToPayment = () => {
-    setIsModalOpen(false) // Cierra el modal
+    // setIsModalOpen(false) // Cierra el modal
     window.open(kushkiPaymentLink, "_blank", "noopener,noreferrer") // Abre el link de Kushki
   }
 
@@ -47,16 +47,16 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
   return (
     <section
       id="call-for-abstracts"
-      className="py-16 md:py-24 bg-gradient-to-b from-primary-blue/5 to-primary-magenta/5 dark:from-slate-800 dark:to-slate-850"
+      className="py-16 md:py-24 bg-primary-magenta dark:bg-pink-900 dark:from-slate-800 dark:to-slate-850"
     >
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-center text-primary-blue dark:text-white mb-12">
+        <h2 className="text-3xl font-bold tracking-tight text-center text-white dark:text-white mb-12">
           Convocatoria / Call for Abstracts
         </h2>
         <div className="grid lg:grid-cols-3 gap-8 items-start">
-          <Card className="lg:col-span-2 shadow-xl dark:bg-slate-900">
+          <Card className="lg:col-span-2 shadow-xl dark:bg-slate-800">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-primary-magenta dark:text-pink-400">
+              <CardTitle className="flex items-center gap-2 text-primary-magenta dark:text-white">
                 <FileText className="h-6 w-6" />
                 Presentación de Resúmenes
               </CardTitle>
@@ -86,7 +86,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                 <Button
                   asChild
                   variant="outline"
-                  className="border-primary-magenta text-primary-magenta hover:bg-primary-magenta/10 hover:text-primary-magenta dark:border-pink-400 dark:text-pink-400 dark:hover:bg-pink-400/10"
+                  className="border-primary-magenta text-primary-magenta hover:bg-primary-magenta/10 hover:text-primary-magenta dark:border-pink-900 dark:text-white dark:bg-primary-magenta dark:hover:bg-pink-700"
                 >
                   <a href="https://forms.gle/rc2nSgwEGNX6hzQk8" target="_blank" rel="noopener noreferrer">
                     <Send className="mr-2 h-4 w-4" /> Enviar Resumen
@@ -97,7 +97,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
           </Card>
 
           <div className="space-y-6">
-            <Card className="shadow-xl dark:bg-slate-900">
+            <Card className="shadow-xl dark:bg-slate-800 transform transition-transform duration-300 hover:scale-105">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-primary-blue dark:text-sky-400">
                   <DollarSign className="h-6 w-6" />
@@ -105,7 +105,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
-                <p className="text-3xl font-bold text-primary-magenta dark:text-pink-400">$25 USD</p>
+                <p className="text-3xl font-bold text-primary-yellow">$25 USD</p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Incluye certificado para ponentes y asistentes.
                 </p>
@@ -113,10 +113,10 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                 <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
                   <DialogTrigger asChild>
                     <Button className="w-full mt-3 bg-primary-magenta hover:bg-primary-magenta/90 text-white">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Pagar Inscripción (Kushki)
+                      <ExternalLink className="mr-2 h-4 w-4" /> Pagar Inscripción
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-lg md:max-w-xl max-h-[90vh] overflow-y-auto">
+                  <DialogContent className="sm:max-w-lg md:max-w-xl max-h-[90vh] overflow-y-auto dark:bg-slate-800">
                     <DialogHeader>
                       <DialogTitle className="flex items-center gap-2 text-primary-blue dark:text-sky-300">
                         <Info className="h-6 w-6" />
@@ -133,7 +133,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                         Una vez realizado el pago en Kushki, debes enviar el comprobante emitido por la plataforma de
                         pagos al siguiente correo electrónico:
                         <br />
-                        <strong className="text-primary-magenta dark:text-pink-400">{emailAddress}</strong>
+                        <strong className="text-primary-magenta dark:text-pink-900">{emailAddress}</strong>
                         <Button
                           variant="ghost"
                           size="sm"
@@ -184,7 +184,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                     <DialogFooter className="sm:justify-end gap-2">
                       <DialogClose asChild>
                         <Button type="button" variant="outline">
-                          Cancelar
+                          Cerrar
                         </Button>
                       </DialogClose>
                       <Button
@@ -192,7 +192,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
                         onClick={handleContinueToPayment}
                         className="bg-primary-blue hover:bg-primary-blue/90"
                       >
-                        Entendido y Continuar al Pago
+                        Entendido, continuar al Pago
                       </Button>
                     </DialogFooter>
                   </DialogContent>
@@ -206,7 +206,7 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
           </div>
         </div>
 
-        <Card className="mt-12 shadow-xl dark:bg-slate-900">
+        <Card className="mt-12 shadow-xl dark:bg-slate-800">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-primary-blue dark:text-sky-400">
               <CalendarCheck2 className="h-6 w-6" />
@@ -218,9 +218,9 @@ export default function CallForAbstractsSection({ kushkiPaymentLink = "#" }: { k
               {importantDates.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-3 bg-slate-50 dark:bg-slate-800 rounded-md"
+                  className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-3 bg-slate-50 dark:bg-slate-900 rounded-md "
                 >
-                  <span className="font-semibold text-primary-magenta dark:text-pink-300">{item.date}</span>
+                  <span className="font-semibold text-primary-magenta dark:text-white">{item.date}</span>
                   <span className="text-gray-700 dark:text-gray-300">{item.event}</span>
                 </li>
               ))}

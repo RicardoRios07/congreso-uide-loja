@@ -9,7 +9,7 @@ import LocationContactSection from "@/components/sections/location-contact-secti
 import Footer from "@/components/layout/footer"
 
 // Debes reemplazar estos placeholders con las URLs reales
-const UIDE_LOGO_URL = "https://i.ibb.co/dJGqCNv5/logo-uide1.png" // Ejemplo: "/images/uide-logo.png"
+const UIDE_LOGO_URL = "https://i.ibb.co/dJGqCNv5/logo-uide1.png" // Ejemplo: "//uide-logo.png"
 const KUSHKI_PAYMENT_LINK = "https://kshk.co/uide-validacion/TZ6aSVqs-/checkout" // Reemplaza con tu link de Kushki
 
 export default function LandingPage() {

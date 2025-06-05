@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Mail } from "lucide-react" // Assuming UIDE has these
+import { Facebook, Linkedin, Mail, Globe } from "lucide-react" // Assuming UIDE has these
 
 export default function Footer({ logoUrl = "/placeholder.svg?width=100&height=33" }: { logoUrl?: string }) {
   const currentYear = new Date().getFullYear()
@@ -64,7 +64,7 @@ export default function Footer({ logoUrl = "/placeholder.svg?width=100&height=33
             {/* Placeholder for social media icons */}
             <div className="flex space-x-4 mt-4">
               <a
-                href="#"
+                href="https://www.facebook.com/UIDELoja/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook UIDE"
@@ -73,16 +73,16 @@ export default function Footer({ logoUrl = "/placeholder.svg?width=100&height=33
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.uide.edu.ec"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter UIDE"
+                aria-label="Website UIDE"
                 className="text-gray-300 hover:text-yellow-300 transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <Globe className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/universidad-internacional-del-ecuador-sede-loja/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn UIDE"

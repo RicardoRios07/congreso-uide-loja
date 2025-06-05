@@ -19,6 +19,9 @@ const config = {
       },
     },
     extend: {
+  fontFamily: {
+    sans: ["var(--font-poppins)", "sans-serif"],
+  },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -30,7 +33,7 @@ const config = {
           foreground: "hsl(var(--primary-foreground))",
           blue: "#002D72", // UIDE Primary Blue
           magenta: "#910048", // UIDE Primary Magenta
-          yellow: "##EAAA00", // UIDE Primary Yellow
+          yellow: "#EAAA00", // UIDE Primary Yellow
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
